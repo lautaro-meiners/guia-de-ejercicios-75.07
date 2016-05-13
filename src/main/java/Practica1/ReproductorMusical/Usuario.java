@@ -1,9 +1,12 @@
 package Practica1.ReproductorMusical;
 
+import java.util.stream.IntStream;
+
 import static Practica1.ReproductorMusical.Catalogo.canciones;
 
 /**
  * Created by lautaro.meiners on 13/05/2016.
+ * From: http://campus.fi.uba.ar/pluginfile.php/109324/mod_resource/content/1/7507GuaEjerciciosPr%C3%A1cticos.pdf
  */
 
 public class Usuario {
