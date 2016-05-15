@@ -1,9 +1,8 @@
-package Practica1.EJ2ReproductorMusical;
+package Practica1.ReproductorMusical;
 
-import java.util.Collections;
-import java.util.Random;
+import java.util.stream.IntStream;
 
-import static Practica1.EJ2ReproductorMusical.Catalogo.canciones;
+import static Practica1.ReproductorMusical.Catalogo.canciones;
 
 /**
  * Created by lautaro.meiners on 13/05/2016.
@@ -27,17 +26,7 @@ public class Usuario {
                 System.out.println("Duracion total de la reproduccion");
                 this.duracionTotalReproduccion();
                 break;
-
-            case 4:
-                System.out.println("Orden aleatorio activado: ");
-                this.activarOrdenAleatorio();
-                break;
-
         }
-    }
-
-    private void activarOrdenAleatorio() {
-        Catalogo.mostrarCancionesShuffle().forEach(s -> System.out.println(s.toString()));
     }
 
     public static void cerrarScanner() {

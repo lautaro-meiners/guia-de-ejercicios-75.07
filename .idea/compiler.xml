@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="GuiaDeEjercicios" />
+        <module name="algo.y.prog.III" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="GuiaDeEjercicios" target="1.8" />
+      <module name="algo.y.prog.III" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

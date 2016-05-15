@@ -1,4 +1,4 @@
-package Practica1.EJ2ReproductorMusical;
+package Practica1.ReproductorMusical;
 
 import java.util.Scanner;
 
@@ -7,7 +7,8 @@ import java.util.Scanner;
  */
 public class Menu {
 
-    public static void llenarCatalogo(){
+
+    public static void main(String[] args) {
         Cancion cancion1 = new Cancion("A","B",4);
         Cancion cancion2 = new Cancion("C","D",2);
         Cancion cancion3 = new Cancion("E","F",4);
@@ -25,12 +26,6 @@ public class Menu {
         Catalogo.agregarCancion(cancion6);
         Catalogo.agregarCancion(cancion7);
         Catalogo.agregarCancion(cancion8);
-
-    }
-
-    public static void main(String[] args) {
-
-        llenarCatalogo();
 
         final Scanner scanner = new Scanner(System.in);
 
@@ -58,6 +53,7 @@ public class Menu {
         int i = InputsDeConsola.leerInt();
         Usuario prueba = new Usuario();
         prueba.actividades(i);
+
 
     }
 }
