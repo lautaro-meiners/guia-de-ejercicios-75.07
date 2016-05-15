@@ -33,7 +33,25 @@ public class Usuario {
                 this.activarOrdenAleatorio();
                 break;
 
+            case 5:
+                System.out.println("Modo repeticion activado: ");
+                this.activarRepeticion();
+                break;
+
+            case 6:
+                System.out.println();
+                this.reproducir();
+                break;
+
+
         }
+    }
+
+    private void activarRepeticion() {
+    }
+
+    private void reproducir() {
+        Catalogo.mostrarCanciones().forEach(s -> System.out.println(s.toString()));
     }
 
     private void activarOrdenAleatorio() {

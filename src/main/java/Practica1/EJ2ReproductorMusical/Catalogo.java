@@ -11,9 +11,6 @@ import java.util.Random;
  */
 public class Catalogo {
     public static ArrayList<Cancion> canciones = new ArrayList<Cancion>();
-
-
-
     private int cuenta;
 
     public static ArrayList<Cancion> mostrarCanciones(){
