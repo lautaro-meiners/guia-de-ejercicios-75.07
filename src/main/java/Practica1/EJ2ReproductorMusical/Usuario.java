@@ -1,6 +1,8 @@
 package Practica1.EJ2ReproductorMusical;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 import static Practica1.EJ2ReproductorMusical.Catalogo.canciones;
@@ -23,6 +25,12 @@ public class Usuario {
                 this.agregarUnaCancion();
                 break;
 
+            case 2:
+                System.out.println("Agregar una lista de canciones");
+                this.agregarListaDeCanciones();
+                break;
+
+
             case 3:
                 System.out.println("Duracion total de la reproduccion");
                 this.duracionTotalReproduccion();
@@ -39,7 +47,7 @@ public class Usuario {
                 break;
 
             case 6:
-                System.out.println();
+                System.out.println("Reproducir todo:");
                 this.reproducir();
                 break;
 
@@ -70,7 +78,11 @@ public class Usuario {
     }
 
     private void agregarListaDeCanciones() {
-        System.out.println("");
+        System.out.println("Escribir el nombre de la lista de canciones que desea agregar");
+        String nombre = InputsDeConsola.leerString();
+        ListaDeCanciones listaDeCanciones = new ListaDeCanciones(nombre);
+        
+
 
     }
 
