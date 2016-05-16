@@ -3,6 +3,8 @@ package Practica1.EJ2ReproductorMusical;
 
 /**
  * Created by lautaro.meiners on 13/05/2016.
+ * From: http://campus.fi.uba.ar/pluginfile.php/109324/mod_resource/content/1/7507GuaEjerciciosPr%C3%A1cticos.pdf
+ * Contacto: lautaromeiners@gmail.com
  */
 public class Cancion {
     private String titulo;

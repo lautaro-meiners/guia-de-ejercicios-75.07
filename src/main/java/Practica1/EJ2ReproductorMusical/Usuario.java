@@ -9,6 +9,8 @@ import static Practica1.EJ2ReproductorMusical.Catalogo.canciones;
 /**
  * Created by lautaro.meiners on 13/05/2016.
  * From: http://campus.fi.uba.ar/pluginfile.php/109324/mod_resource/content/1/7507GuaEjerciciosPr%C3%A1cticos.pdf
+ * Contacto: lautaromeiners@gmail.com
+ *
  */
 
 public class Usuario {
@@ -50,7 +52,6 @@ public class Usuario {
                 this.reproducir();
                 break;
 
-
         }
     }
 
@@ -69,14 +70,12 @@ public class Usuario {
         InputsDeConsola.cerrar();
     }
 
-    public static void agregarUnaCancion() {
+    private void agregarUnaCancion() {
         System.out.println("Escribir el: Titulo, Banda y duracion the la cancion que quiera agregar");
         Cancion cancion = new Cancion(InputsDeConsola.leerString(), InputsDeConsola.leerString(), InputsDeConsola.leerInt());
         Catalogo.agregarCancion(cancion);
         Catalogo.mostrarCanciones().forEach(s -> System.out.println(s.toString()));
     }
-
-
 
     private void agregarListaDeCanciones() {
         System.out.println("Escribir el nombre y la cantidad de canciones de la lista que desea agregar");
@@ -91,15 +90,11 @@ public class Usuario {
         Catalogo.mostrarCanciones().forEach(s -> System.out.println(s.toString()));
     }
 
-
     private void duracionTotalReproduccion() {
         int duracionTotal = 0;
         for (int t = 0; t < canciones.size(); t++) {
             duracionTotal += canciones.get(t).getDuracion();
         }
         System.out.println("La duraccion total es: " + duracionTotal + " minutos");
-
     }
-
-
 }

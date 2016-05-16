@@ -8,6 +8,8 @@ import java.util.Random;
 
 /**
  * Created by lautaro.meiners on 13/05/2016.
+ * From: http://campus.fi.uba.ar/pluginfile.php/109324/mod_resource/content/1/7507GuaEjerciciosPr%C3%A1cticos.pdf
+ * Contacto: lautaromeiners@gmail.com
  */
 public class Catalogo {
     public static ArrayList<Cancion> canciones = new ArrayList<Cancion>();
@@ -24,19 +26,8 @@ public class Catalogo {
 
     }
 
-
     public static void agregarCancion(Cancion cancion){
         canciones.add(cancion);
     }
-
-
-//    public int duracionTotal(){
-//        int duracionTotal = 0;
-//        for (int t= 0; t < canciones.size(); t++){
-//            duracionTotal += canciones.get(t).getDuracion();
-//        }
-//        return duracionTotal;
-//    }
-
 
 }
