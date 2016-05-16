@@ -1,9 +1,8 @@
 package Practica1.EJ2ReproductorMusical;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.HashSet;
+import java.util.Set;
 
 import static Practica1.EJ2ReproductorMusical.Catalogo.canciones;
 
@@ -70,20 +69,26 @@ public class Usuario {
         InputsDeConsola.cerrar();
     }
 
-    private void agregarUnaCancion() {
+    public static void agregarUnaCancion() {
         System.out.println("Escribir el: Titulo, Banda y duracion the la cancion que quiera agregar");
         Cancion cancion = new Cancion(InputsDeConsola.leerString(), InputsDeConsola.leerString(), InputsDeConsola.leerInt());
         Catalogo.agregarCancion(cancion);
         Catalogo.mostrarCanciones().forEach(s -> System.out.println(s.toString()));
     }
 
+
+
     private void agregarListaDeCanciones() {
-        System.out.println("Escribir el nombre de la lista de canciones que desea agregar");
-        String nombre = InputsDeConsola.leerString();
-        ListaDeCanciones listaDeCanciones = new ListaDeCanciones(nombre);
-        
-
-
+        System.out.println("Escribir el nombre y la cantidad de canciones de la lista que desea agregar");
+        String playlist = InputsDeConsola.leerString();
+        int cantidadDeCanciones = InputsDeConsola.leerInt();
+        System.out.println("Usted agrego la playlist " + playlist + " con " + cantidadDeCanciones + " canciones");
+        for (int i = 0; i < cantidadDeCanciones; i++){
+            System.out.println("Escribir el: Titulo, Banda y duracion the la cancion que quiera agregar");
+            Cancion cancion = new Cancion(InputsDeConsola.leerString(), InputsDeConsola.leerString(), InputsDeConsola.leerInt());
+            Catalogo.agregarCancion(cancion);
+        }
+        Catalogo.mostrarCanciones().forEach(s -> System.out.println(s.toString()));
     }
 
 
@@ -91,8 +96,10 @@ public class Usuario {
         int duracionTotal = 0;
         for (int t = 0; t < canciones.size(); t++) {
             duracionTotal += canciones.get(t).getDuracion();
-            System.out.println("La duraccion total es: " + duracionTotal);
         }
+        System.out.println("La duraccion total es: " + duracionTotal + " minutos");
 
     }
+
+
 }
